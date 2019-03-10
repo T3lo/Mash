@@ -1,0 +1,20 @@
+<h1>Chat</h1>
+
+<ul>
+    <li ng-repeat="name in names">
+        {{name.login}}
+    </li>
+</ul>
+<h1>MSGS : </h1> <br>
+
+<div id="msg">
+    <ul>
+        <li ng-repeat="msg in msgs">
+            #{{msg.time}} {{msg.login}} : {{msg.msg}}
+            <hr>
+        </li>
+    </ul>
+</div>
+
+<input type="text" ng-model="talk">
+<button ng-click="sendText()">Send</button>
